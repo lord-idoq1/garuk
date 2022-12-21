@@ -62,16 +62,16 @@ def main_menu():
             Button.inline(f"🤖 Bot ({len(GRP_INFO['bot'])})", data="bot_menu"),
         ),
         (
-            Button.inline(f"🎨 Fun ({len(GRP_INFO['fun'])})", data="fun_menu"),
-            Button.inline(f"🧩 Misc ({len(GRP_INFO['misc'])})", data="misc_menu"),
+            Button.inline(f"Fun ({len(GRP_INFO['fun'])})", data="fun_menu"),
+            Button.inline(f"Misc ({len(GRP_INFO['misc'])})", data="misc_menu"),
         ),
         (
-            Button.inline(f"🧰 Tools ({len(GRP_INFO['tools'])})", data="tools_menu"),
-            Button.inline(f"🗂 Utils ({len(GRP_INFO['utils'])})", data="utils_menu"),
+            Button.inline(f" Tools ({len(GRP_INFO['tools'])})", data="tools_menu"),
+            Button.inline(f" Utils ({len(GRP_INFO['utils'])})", data="utils_menu"),
         ),
         (
-            Button.inline(f"➕ Extra ({len(GRP_INFO['extra'])})", data="extra_menu"),
-            Button.inline("🔒 Close Menu", data="close"),
+            Button.inline(f" Extra ({len(GRP_INFO['extra'])})", data="extra_menu"),
+            Button.inline(" Close Menu", data="close"),
         ),
     ]
     if Config.BADCAT:
@@ -141,8 +141,8 @@ async def article_builder(event, method):
         buttons = [
             (
                 Button.inline("Stats", data="stats"),
-                Button.url("Repo", "https://github.com/TgCatUB/catuserbot"),
-            )
+                Button.url("Repo", "https://github.com/"),
+     
         ]
         try:
             from userbot.plugins.alive import catalive_text
@@ -150,9 +150,9 @@ async def article_builder(event, method):
             query = catalive_text()
         except Exception:
             return None
-        title = "Cat Alive"
+        title = "JooxBot Alive"
         thumb = get_thumb("alive.png")
-        description = "Alive menu for CatUserbot."
+        description = "Alive menu for Jooxbot."
         ALIVE_PIC = gvarstatus("ALIVE_PIC")
         IALIVE_PIC = gvarstatus("IALIVE_PIC")
         if IALIVE_PIC:
